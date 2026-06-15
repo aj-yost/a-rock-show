@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar | A Rock Show</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html">
+      <img src="images/logo.svg" alt="A Rock Show logo">
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="booking.html">Booking</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <h2>Show Calendar</h2>
+  <p class="lede">Come see A Rock Show live. Click a show for details.</p>
+  <div id="calendar"></div>
+</section>
+
+<footer>
+  <p>© 2026 A Rock Show. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.20/index.global.min.js"></script>
+<script src="shows.js"></script>
+<script>
+function showHasTime(show) {
+  return show.start && show.start.includes("T");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const calendarEl = document.getElementById("calendar");
+  const allShows = window.shows || [];
+
+  if (!calendarEl || typeof FullCalendar === "undefined") {
+    return;
+  }
+
+  const calendarEvents = allShows.map(show => ({
+    title: show.title || "Show TBA",
+    start: show.start,
+    end: show.end || null,
+    allDay: !showHasTime(show),
+    extendedProps: {
+      location: show.location || "Location TBD",
+      description: show.description || "",
+      hasTime: showHasTime(show)
+    }
+  }));
+
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: "dayGridMonth",
+    height: "auto",
+    events: calendarEvents,
+    eventColor: "#c62828",
+    eventTextColor: "#ffffff",
+
+    headerToolbar: {
+      left: "prev,next today",
+      center: "title",
+      right: "dayGridMonth,listMonth"
+    },
+
+    eventClick: function(info) {
+      const event = info.event;
+      const hasTime = event.extendedProps.hasTime;
+
+      const startDate = event.start.toLocaleDateString([], {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+
+      let timeLine = "Time: TBD";
+
+      if (hasTime) {
+        const startTime = event.start.toLocaleTimeString([], {
+          hour: "numeric",
+          minute: "2-digit"
+        });
+
+        const endTime = event.end
+          ? event.end.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })
+          : "";
+
+        timeLine = "Time: " + startTime + (endTime ? " - " + endTime : "");
+      }
+
+      alert(
+        event.title + "\n\n" +
+        "Date: " + startDate + "\n" +
+        timeLine + "\n" +
+        "Location: " + event.extendedProps.location + "\n\n" +
+        event.extendedProps.description
+      );
+    }
+  });
+
+  calendar.render();
+});
+</script>
+
+</body>
+</html>

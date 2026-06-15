@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Rock Show | Live Rock Band</title>
+  <meta name="description" content="A Rock Show - live rock band in Central Pennsylvania." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html">
+      <img src="images/logo.svg" alt="A Rock Show logo">
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="booking.html">Booking</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <img class="hero-logo" src="images/logo.svg" alt="A Rock Show logo">
+    <h1>Live Rock. Big Energy.</h1>
+    <p>High-energy live rock for festivals, bars, private events, and community celebrations across Central Pennsylvania.</p>
+    <a class="button" href="calendar.html">View Calendar</a>
+    <a class="button secondary" href="booking.html">Book the Band</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Upcoming Shows</h2>
+
+  <div id="upcoming-shows" class="card-grid"></div>
+
+  <p id="no-upcoming-shows" class="lede" style="display: none;">
+    No upcoming shows are currently listed. Check back soon!
+  </p>
+
+  <a class="button secondary" href="calendar.html">View Full Calendar</a>
+</section>
+
+<section class="section narrow">
+  <h2>About the Band</h2>
+  <p class="lede">A Rock Show brings classic favorites, modern hits, and a crowd-friendly live rock experience to stages throughout the region.</p>
+  <a class="button secondary" href="about.html">Meet the Band</a>
+</section>
+
+<footer>
+  <p>© 2026 A Rock Show. All rights reserved.</p>
+</footer>
+
+<script src="shows.js"></script>
+<script>
+function showHasTime(show) {
+  return show.start && show.start.includes("T");
+}
+
+function getLocalStartDate(show) {
+  return showHasTime(show)
+    ? new Date(show.start)
+    : new Date(show.start + "T00:00:00");
+}
+
+function isUpcomingShow(show) {
+  const now = new Date();
+
+  if (showHasTime(show)) {
+    return new Date(show.start) > now;
+  }
+
+  // Date-only shows stay upcoming until the end of that local day.
+  const endOfShowDate = new Date(show.start + "T23:59:59");
+  return endOfShowDate >= now;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allShows = window.shows || [];
+
+  const upcomingShows = allShows
+    .filter(isUpcomingShow)
+    .sort((a, b) => getLocalStartDate(a) - getLocalStartDate(b))
+    .slice(0, 3);
+
+  const upcomingShowsContainer = document.getElementById("upcoming-shows");
+  const noUpcomingShowsMessage = document.getElementById("no-upcoming-shows");
+
+  if (!upcomingShowsContainer) return;
+
+  if (upcomingShows.length === 0) {
+    noUpcomingShowsMessage.style.display = "block";
+    return;
+  }
+
+  upcomingShows.forEach(show => {
+    const hasTime = showHasTime(show);
+    const start = getLocalStartDate(show);
+    const end = show.end ? new Date(show.end) : null;
+
+    const date = start.toLocaleDateString([], {
+      month: "long",
+      day: "numeric",
+      year: "numeric"
+    });
+
+    let timeDisplay = "Time TBD";
+
+    if (hasTime) {
+      const startTime = start.toLocaleTimeString([], {
+        hour: "numeric",
+        minute: "2-digit"
+      });
+
+      const endTime = end
+        ? end.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })
+        : "";
+
+      timeDisplay = startTime + (endTime ? " – " + endTime : "");
+    }
+
+    const card = document.createElement("div");
+    card.className = "card show-card";
+
+    card.innerHTML = `
+      <h3>${date}</h3>
+      <p>
+        <strong>${show.title || "Show TBA"}</strong><br>
+        ${show.location || "Location TBD"}<br>
+        ${timeDisplay}
+      </p>
+    `;
+
+    upcomingShowsContainer.appendChild(card);
+  });
+});
+</script>
+
+</body>
+</html>
