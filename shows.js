@@ -1,7 +1,7 @@
-// Update your band schedule here.
+// Update schedule here.
 // Both index.html and calendar.html read from this same file.
 //
-// You can use any of these formats:
+// Use any of these formats:
 //
 // 1) Date only:
 // start: "2026-08-15"
