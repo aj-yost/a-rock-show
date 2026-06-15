@@ -51,7 +51,7 @@ title: "Bear Bash",
 start: "2026-09-06",
 location: "E. Water St, Lock Haven, PA",
 description: "Bear Bash Festival in Lock Haven"
-}
+},
 
 {
 title: "Cafe 210 West",
@@ -65,7 +65,7 @@ title: "Boalsburg Memorial Day Festival",
 start: "2026-05-25",
 location: "Main Street, Boalsburg, PA",
 description: "Catch A Rock Show in downtown Boalsburg for the Memorial Day festival"
-}
+},
 
 {
 title: "Smokehouse Bar & Grill",
@@ -107,5 +107,5 @@ location: "10431 Fairgrounds Rd, Huntingdon, PA"
 title: "Arena Bar & Grill",
 start: "2026-01-09"
 location: "1521 Martin St, State College, PA"
-},
+}
 ];
