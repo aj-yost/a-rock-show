@@ -75,37 +75,37 @@ location: "15 Commerce Dr, Milroy, PA",
 
 {
 title: "Cafe 210 West",
-start: "2026-05-07"
+start: "2026-05-07",
 location: "210 W College Ave, State College, PA"
 },
 
 {
 title: "Arena Bar & Grill",
-start: "2026-03-13"
+start: "2026-03-13",
 location: "1521 Martin St, State College, PA"
 },
 
 {
 title: "Cafe 210 West",
-start: "2026-02-28"
+start: "2026-02-28",
 location: "210 W College Ave, State College, PA"
 },
 
 {
 title: "The Bar",
-start: "2026-02-21"
+start: "2026-02-21",
 location: "306 Boal Ave, Boalsburg, PA"
 },
 
 {
 title: "Huntingdon Elks Lodge",
-start: "2026-01-30"
+start: "2026-01-30",
 location: "10431 Fairgrounds Rd, Huntingdon, PA"
 },
 
 {
 title: "Arena Bar & Grill",
-start: "2026-01-09"
+start: "2026-01-09",
 location: "1521 Martin St, State College, PA"
 }
 ];
