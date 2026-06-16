@@ -17,6 +17,14 @@
 window.shows = [
 {
 title: "Cafe 210 West",
+start: "2026-06-19T21:00:00",
+end: "2026-06-20T00:00:00",
+location: "210 W College Ave, State College, PA",
+description: "A Rock Show live at Cafe 210 West"
+},
+  
+{
+title: "Cafe 210 West",
 start: "2026-06-05T21:00:00",
 end: "2026-06-06T00:00:00",
 location: "210 W College Ave, State College, PA",
