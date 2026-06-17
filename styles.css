@@ -40,18 +40,18 @@ header {
   padding: 14px 20px;
   display: flex;
   align-items: center;
-  gap: 28px;
+  justify-content: center;
 }
 
 .logo img {
   width: 180px;
   height: auto;
+  margin-right: 40px;
 }
 
 .main-nav {
   display: flex;
   gap: 24px;
-  flex: 1;
   align-items: center;
 }
 
@@ -71,7 +71,7 @@ header {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-left: auto;
+  margin-left: 10px;
 }
 
 .header-socials img {
