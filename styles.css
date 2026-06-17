@@ -95,11 +95,11 @@ header {
 /* Hero */
 
 .hero {
-  min-height: 76vh;
+  min-height: 52vh;
   display: grid;
   place-items: center;
   text-align: center;
-  padding: 90px 20px;
+  padding: 52px 20px;
   background:
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.88)),
     url("images/band-photo.svg");
