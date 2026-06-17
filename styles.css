@@ -32,32 +32,61 @@ header {
   border-bottom: 3px solid var(--red);
 }
 
+/* Header */
+
 .nav {
   max-width: 1180px;
   margin: auto;
   padding: 14px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 28px;
 }
 
-.logo img { width: 180px; height: auto; }
+.logo img {
+  width: 180px;
+  height: auto;
+}
 
-nav {
+.main-nav {
   display: flex;
   gap: 24px;
+  flex: 1;
   align-items: center;
 }
 
-nav a {
+.main-nav a {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px;
 }
 
-nav a:hover, nav a.active { color: var(--yellow); }
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--yellow);
+}
+
+.header-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.header-socials img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.header-socials a:hover img {
+  opacity: 0.8;
+  transform: scale(1.08);
+}
+
+/* Hero */
 
 .hero {
   min-height: 76vh;
@@ -98,6 +127,8 @@ h1, h2, h3 {
   margin: 0 auto 28px;
 }
 
+/* Buttons */
+
 .button {
   display: inline-block;
   background: var(--red);
@@ -122,6 +153,8 @@ h1, h2, h3 {
   border-color: var(--cream);
 }
 
+/* Sections */
+
 .section {
   max-width: 1180px;
   margin: auto;
@@ -142,6 +175,8 @@ h1, h2, h3 {
 }
 
 .muted { color: var(--muted); }
+
+/* Cards */
 
 .card-grid {
   display: grid;
@@ -164,6 +199,8 @@ h1, h2, h3 {
 }
 
 .show-card h3 { color: var(--yellow); }
+
+/* Booking */
 
 .booking-list {
   columns: 2;
@@ -207,6 +244,8 @@ button:hover {
   color: var(--black);
 }
 
+/* About */
+
 .about-photo {
   border: 5px solid var(--red);
   margin-bottom: 28px;
@@ -220,6 +259,8 @@ button:hover {
   width: calc(100% + 48px);
   max-width: calc(100% + 48px);
 }
+
+/* Footer */
 
 footer {
   text-align: center;
@@ -284,15 +325,22 @@ footer {
   padding: 2px 4px;
 }
 
+/* Responsive */
+
 @media (max-width: 760px) {
   .nav {
     flex-direction: column;
+    gap: 14px;
   }
 
-  nav {
+  .main-nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 14px;
+  }
+
+  .header-socials {
+    margin-left: 0;
   }
 
   .booking-list {
