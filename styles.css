@@ -260,11 +260,14 @@ button:hover {
 .member-card img {
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center top;
   border-bottom: 4px solid var(--red);
   margin: -24px -24px 20px;
   width: calc(100% + 48px);
   max-width: calc(100% + 48px);
+}
+
+.chris-photo {
+  object-position: center top;
 }
 
 /* Footer */
