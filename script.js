@@ -1,1 +1,21 @@
-// Reserved for future features.
+// Header/footer script
+document.addEventListener("DOMContentLoaded", () => {
+  const headerPlaceholder = document.getElementById("header-placeholder");
+  const footerPlaceholder = document.getElementById("footer-placeholder");
+
+  if (headerPlaceholder) {
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        headerPlaceholder.innerHTML = data;
+      });
+  }
+
+  if (footerPlaceholder) {
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        footerPlaceholder.innerHTML = data;
+      });
+  }
+});
