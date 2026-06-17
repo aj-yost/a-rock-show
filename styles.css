@@ -37,22 +37,28 @@ header {
 .nav {
   max-width: 1180px;
   margin: auto;
-  padding: 14px 20px;
+  padding: 14px 32px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 36px;
+}
+
+.logo {
+  flex: 0 0 auto;
 }
 
 .logo img {
   width: 180px;
   height: auto;
-  margin-right: 40px;
 }
 
 .main-nav {
   display: flex;
-  gap: 24px;
   align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: clamp(28px, 4vw, 56px);
 }
 
 .main-nav a {
@@ -70,8 +76,8 @@ header {
 .header-socials {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-left: 10px;
+  gap: 18px;
+  flex: 0 0 auto;
 }
 
 .header-socials img {
@@ -330,17 +336,33 @@ footer {
 @media (max-width: 760px) {
   .nav {
     flex-direction: column;
+    justify-content: center;
     gap: 14px;
+    padding: 14px 20px;
+    text-align: center;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  .logo img {
+    width: 170px;
+    margin: 0 auto;
   }
 
   .main-nav {
+    flex: none;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 14px;
+    gap: 14px 20px;
+    width: 100%;
   }
 
   .header-socials {
-    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
   }
 
   .booking-list {
