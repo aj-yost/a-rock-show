@@ -22,6 +22,14 @@ end: "2026-06-20T00:00:00",
 location: "210 W College Ave, State College, PA",
 description: "A Rock Show live at Cafe 210 West"
 },
+
+{
+title: "Cafe 210 West",
+start: "2026-07-18T21:30:00",
+end: "2026-07-19T00:30:00",
+location: "210 W College Ave, State College, PA",
+description: "A Rock Show live at Cafe 210 West"
+},
   
 {
 title: "Cafe 210 West",
