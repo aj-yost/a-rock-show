@@ -15,6 +15,15 @@
 
 
 window.shows = [
+
+{
+title: "Cafe 210 West",
+start: "2026-08-23T21:30:00",
+end: "2026-08-24T00:30:00",
+location: "210 W College Ave, State College, PA",
+description: "A Rock Show live at Cafe 210 West"
+},
+
 {
 title: "Cafe 210 West",
 start: "2026-07-25T21:30:00",
@@ -61,13 +70,6 @@ start: "2026-07-11T14:00:00",
 end: "2026-07-11T15:00:00",
 location: "51 Boal Ave, Boalsburg, PA",
 description: "A Rock Show live at the People's Choice Festival in Boalsburg"
-},
-
-{
-title: "Private Party",
-start: "2026-07-25",
-location: "Carlisle, PA",
-description: "Private event"
 },
 
 {
