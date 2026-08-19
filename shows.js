@@ -16,14 +16,31 @@
 
 window.shows = [
 
+
+{
+title: "Centre Hills Country Club",
+start: "2026-08-28T18:00:00",
+end: "2026-08-28T21:00:00",
+location: "State College, PA",
+},
+  
 {
 title: "Cafe 210 West",
-start: "2026-08-23T21:30:00",
-end: "2026-08-24T00:30:00",
+start: "2026-08-23T21:00:00",
+end: "2026-08-24T00:00:00",
 location: "210 W College Ave, State College, PA",
 description: "A Rock Show live at Cafe 210 West"
 },
 
+
+{
+title: "Cafe 210 West",
+start: "2026-08-21T21:30:00",
+end: "2026-08-22T00:30:00",
+location: "210 W College Ave, State College, PA",
+description: "A Rock Show live at Cafe 210 West"
+},
+  
 {
 title: "Cafe 210 West",
 start: "2026-07-25T21:30:00",
