@@ -206,6 +206,40 @@ h1, h2, h3 {
 
 .show-card h3 { color: var(--yellow); }
 
+
+/* Live videos */
+
+.live-intro {
+  margin-top: -8px;
+  margin-bottom: 28px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.video-card {
+  background: var(--dark);
+  border-left: 5px solid var(--red);
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.28);
+}
+
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Booking */
 
 .booking-list {
