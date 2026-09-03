@@ -16,7 +16,14 @@
 
 window.shows = [
 
-
+{
+title: "Five Star Power Sports Grand Opening",
+start: "2026-09-12T16:00:00",
+end: "2026-09-12T19:00:00",
+location: "1238 South 2nd St, Clearfield, PA",
+description: "A Rock Show live at the grand opening of Five Star Powersports in Clearfield"
+},
+  
 {
 title: "Centre Hills Country Club",
 start: "2026-08-28T18:00:00",
@@ -91,7 +98,8 @@ description: "A Rock Show live at the People's Choice Festival in Boalsburg"
 
 {
 title: "Bear Bash",
-start: "2026-09-06",
+start: "2026-09-06T16:00:00",
+end: "2026-09-06T17:00:00",
 location: "E. Water St, Lock Haven, PA",
 description: "Bear Bash Festival in Lock Haven"
 },
