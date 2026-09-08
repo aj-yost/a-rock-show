@@ -16,6 +16,15 @@
 
 window.shows = [
 
+
+{
+title: "A's Pub",
+start: "2026-10-09T21:00:00",
+end: "2026-10-10T00:00:00",
+location: "116 S Allen St, State College, PA",
+description: "A Rock Show live at A's Pub"
+},
+  
 {
 title: "Five Star Power Sports Grand Opening",
 start: "2026-09-12T16:00:00",
