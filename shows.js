@@ -16,6 +16,13 @@
 
 window.shows = [
 
+ 
+{
+title: "Hootinanny Dive Bar Extraordinairr",
+start: "2026-12-04T21:00:00",
+end: "2026-12-04T23:00:00",
+location: "121 W Bishop St, Bellefonte, PA",
+}, 
 
 {
 title: "A's Pub",
