@@ -25,9 +25,17 @@ location: "121 W Bishop St, Bellefonte, PA",
 }, 
 
 {
+title: "Cafe 210 West",
+start: "2026-10-24T21:30:00",
+end: "2026-10-24T11:30:00",
+location: "210 W College Ave, State College, PA",
+description: "A Rock Show live at Cafe 210 West"
+},
+ 
+{
 title: "A's Pub",
-start: "2026-10-09T21:00:00",
-end: "2026-10-10T00:00:00",
+start: "2026-10-17T21:00:00",
+end: "2026-10-18T00:00:00",
 location: "116 S Allen St, State College, PA",
 description: "A Rock Show live at A's Pub"
 },
