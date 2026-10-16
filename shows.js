@@ -16,6 +16,12 @@
 
 window.shows = [
 
+ {
+title: "The Bar",
+start: "2026-11-20T21:00:00",
+end: "2026-11-20T23:00:00",
+location: "306 Boal Ave, Boalsburg, PA"
+},
  
 {
 title: "Hootinanny Dive Bar Extraordinairr",
